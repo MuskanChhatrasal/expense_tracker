@@ -16,10 +16,13 @@ export const Provider = ({children})=>{
     const addTransaction = (transaction)=>{
         dispatch({type: 'ADD_TRANSACTION', payload: transaction});
     }
+
+    
     return (
         <ExpenseTrackerContext.Provider value={{
         deleteTransaction,
-        addTransaction
+        addTransaction,
+        transactions
         }}>
             {children}
         </ExpenseTrackerContext.Provider>
